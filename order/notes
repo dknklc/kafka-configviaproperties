@@ -1,0 +1,5 @@
+
+# Biz Kafkaya event gönderirken Java domaininden ç?k?p ba?ka bir teknoloji domainine gidiyoruz. Bunun için elimizdeki eventi serialize ediyoruz.
+# Ayn? ?ekil Kafkadan da okurken kafkadaki bir veriyi kendi taraf?na deserialize ediyorsun.
+# Biz eventi Kafkaya gönderiyoruz ya , Kafkaya giderken o event serialize oluyor ya ayn? zamanda bir de header koyuyor içine. Header'?n içinde sizin class?n bir pathi oluyor. com.dekankilic.order.OrderPlaceEvent
+# Senin gönderdi?in eventin header?nda ba?ka bir classpath var, kar?? consumer'?n ki bam ba?ka. Bu durumda validation hatas? almamak için header eklemeyi kapatabiliriz.
