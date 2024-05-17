@@ -26,7 +26,7 @@ jobs:
       - name: Build
         working-directory: ${{ matrix.image_name }}
         run: |
-          mvn --batch-mode --update-snapshots verify
+          mvn -B package --file pom.xml
           mkdir staging && cp target/*.jar staging
 
       - name: Log in to Github Container Registry
