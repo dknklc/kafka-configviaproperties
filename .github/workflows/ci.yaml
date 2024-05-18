@@ -27,7 +27,7 @@ jobs:
         working-directory: ${{ matrix.image_name }}
         run: |
           mvn -B package --file pom.xml
-          mkdir staging && cp target/*.jar staging
+          mv target/$(ls target) app.jar
 
       - name: Log in to Github Container Registry
         uses: docker/login-action@v2
